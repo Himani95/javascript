@@ -1,0 +1,107 @@
+<html>
+<head>
+<style>
+</style>
+
+<script type="text/javascript">
+
+var intervalid=0;
+
+function cleartext()
+{
+document.getElementById("txtfield").value="0.0";
+intervalid=setInterval("cleardisp()",3000);
+}
+
+function display(val)
+{
+calcform.txt1.value=val;
+}
+
+function cleardisp()
+{
+document.getElementById("txtfield").value="";
+clearInterval(intervalid);
+}
+
+function disableAll()
+{
+document.getElementById("Btn").disabled=true;
+document.getElementById("Btn1").disabled=true;
+document.getElementById("Btn2").disabled=true;
+document.getElementById("Btn3").disabled=true;
+document.getElementById("Btn4").disabled=true;
+document.getElementById("Btn5").disabled=true;
+document.getElementById("Btn6").disabled=true;
+document.getElementById("Btn7").disabled=true;
+document.getElementById("Btn8").disabled=true;
+document.getElementById("Btn9").disabled=true;
+document.getElementById("Btndot").disabled=true;
+document.getElementById("Btnadd").disabled=true;
+document.getElementById("Btnsub").disabled=true;
+document.getElementById("Btnmul").disabled=true;
+document.getElementById("Btndiv").disabled=true;
+document.getElementById("Btnopen").disabled=true;
+document.getElementById("Btnclose").disabled=true;
+document.getElementById("Btnclear").disabled=true;
+document.getElementById("Btneq").disabled=true;
+}
+
+
+function enableAll(){
+document.getElementById("Btn").disabled=false;
+document.getElementById("Btn1").disabled=false;
+document.getElementById("Btn2").disabled=false;
+document.getElementById("Btn3").disabled=false;
+document.getElementById("Btn4").disabled=false;
+document.getElementById("Btn5").disabled=false;
+document.getElementById("Btn6").disabled=false;
+document.getElementById("Btn7").disabled=false;
+document.getElementById("Btn8").disabled=false;
+document.getElementById("Btn9").disabled=false;
+document.getElementById("Btndot").disabled=false;
+document.getElementById("Btnadd").disabled=false;
+document.getElementById("Btnsub").disabled=false;
+document.getElementById("Btnmul").disabled=false;
+document.getElementById("Btndiv").disabled=false;
+document.getElementById("Btnopen").disabled=false;
+document.getElementById("Btnclose").disabled=false;
+document.getElementById("Btnclear").disabled=false;
+document.getElementById("Btneq").disabled=false;
+}
+
+</script>
+
+</head>
+<body>
+<form name="calcform">
+<table border="5"><tr>
+<th>My Calculator</th><br></tr><tr>
+<td><input type=text name=txt1 id=txtfield style="text-align:right" onclick="this.value=""></td><br></tr><tr>
+<td><input type="button" name=onbtn value=on onclick="cleartext(); enableAll();">
+<input type=button id=Btnoff name=offbtn value=off onclick="cleardisp(); disableAll();">
+
+
+<input type=button name=btn3 id=Btn value=0 disabled=true onclick="calcform.txt1.value += '0'">
+<input type=button name=btn4 id=Btn1 value=1 disabled=true onclick="calcform.txt1.value += '1'"><br></tr><tr>
+<td><input type=button name=btn5 id=Btn2 value=2 disabled=true onclick="calcform.txt1.value += '2'">&nbsp;&nbsp
+<input type=button name=btn6 id=Btn3 value=3 disabled=true onclick="calcform.txt1.value += '3'">&nbsp;&nbsp
+<input type=button name=btn7 id=Btn4 value=4 disabled=true onclick="calcform.txt1.value += '4'">&nbsp;&nbsp
+<input type=button name=btn8 id=Btn5 value=5 disabled=true onclick="calcform.txt1.value += '5'"></td><br></tr><tr>
+<td><input type=button name=btn9 id=Btn6 value=6 disabled=true onclick="calcform.txt1.value += '6'">&nbsp;&nbsp
+<input type=button name=btn10 id=Btn7 value=7 disabled=true onclick="calcform.txt1.value += '7'">&nbsp;&nbsp
+<input type=button name=btn11 id=Btn8 value=8 disabled=true onclick="calcform.txt1.value += '8'">&nbsp;&nbsp
+<input type=button name=btn12 id=Btn9 value=9 disabled=true onclick="calcform.txt1.value += '9'"></td></tr><br><tr>
+<td><input type=button name=btn13 id=Btndot value=. disabled=true onclick="calcform.txt1.value += '.'">
+<input type=button name=btn14 id=Btnopen value=( disabled=true onclick="calcform.txt1.value += '('">
+<input type=button name=btn15 id=Btnclose value=) disabled=true onclick="calcform.txt1.value += ')'">
+<input type=button name=btn16 id=Btnadd value=+ disabled=true onclick="calcform.txt1.value += '+'">
+<input type=button name=btn17 id=Btnsub value=- disabled=true onclick="calcform.txt1.value += '-'"></td></tr><br><tr>
+<td><input type=button name=btn18 id=Btnmul value=* disabled=true onclick="calcform.txt1.value += '*'">
+<input type=button name=btn19 id=Btndiv value=/ disabled=true onclick="calcform.txt1.value += '/'">
+<input type=button name=btn20 id=Btneq value== disabled=true onclick="calcform.txt1.value=eval(calcform.txt1.value)">
+<input type=button name=btn21 id=Btnclear value=clear disabled=true onclick="cleartext();"></td></tr>
+
+</table>
+</body>
+</html>
